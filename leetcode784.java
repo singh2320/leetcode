@@ -13,12 +13,12 @@ class Solution {
             return;
         }
 
-        backtrack(chars, index + 1, result); // Continue without change
+        backtrack(chars, index + 1, result); 
 
         if (Character.isLetter(chars[index])) {
-            chars[index] ^= 32; // Toggle case (ASCII trick)
+            chars[index] ^= 32; 
             backtrack(chars, index + 1, result);
-            chars[index] ^= 32; // Backtrack
+            chars[index] ^= 32; 
         }
     }
 }
